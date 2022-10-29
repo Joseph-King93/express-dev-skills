@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+</head>
+<body>
+    <h3>
+        <%= skill.skill %>
+    </h3>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit">Delete Skill</button>
+      </form>
+    <h3>
+        Learned: <%= skill.learned ? true : false %>
+    </h3>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+    <br>
+    </br>
+    <a href="/skills">Return to List</a>
+</body>
+</html>

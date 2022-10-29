@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express Skill</title>
+</head>
+
+<body>
+  <h1>Edit Skill</h1>
+  <p><%= skill.skill %></p>
+  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+    <label for="skill-input">Skill: </label>
+    <input id="skill-input" type="text" placeholder="True" name="skill" value="<%= skill.skill %>">
+
+
+    <label for="learned-input">Learned: </label>
+    <input id="learned-input" type="text" placeholder="false" name="learned" value="<%= skill.learned %>">
+    <button type="submit">Update Skill</button>
+  </form>
+</body>
+
+</html>
